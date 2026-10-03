@@ -1,0 +1,10 @@
+CREATE DATABASE Clientes()
+
+
+CREATE TABLE Clientes(
+    cli_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    cli_email VARCHAR(100) NOT NULL UNIQUE,
+    cli_senha VARCHAR(300) NOT NULL,
+    cli_nome VARCHAR(250) NOT NULL,
+    cli_ProdId VARCHAR(200) NOT NULL UNIQUE
+)
