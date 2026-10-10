@@ -1,45 +1,68 @@
-import React from "react";
+import {StyleSheet} from 'react-native'
 
-interface CardProps {
-  titulo: string;
-  conteudo: string;
-  gasto?: string | number;
-  classe?: "cor1" | "cor2" | "cor3";
-  acao?: () => void;
-  textoBotao?: string;
-}
-
-export default function Card({
-  titulo,
-  conteudo,
-  gasto,
-  classe = "cor1",
-  acao,
-  textoBotao = "Ver detalhes",
-}: CardProps) {
-  return (
-    <article className={`card ${classe}`}>
-      <div className="titulo">
-        <h3 className="textoGeral tituloCartao">{titulo}</h3>
-      </div>
-
-      <div className="conteudo">
-        <p className="textoGeral conteudoCartao">{conteudo}</p>
-      </div>
-
-      {gasto !== undefined && (
-        <div className="gasto">
-          <strong className="textoGeral gastoCartao">
-            {gasto}
-          </strong>
-
-          {acao && (
-            <button className="btn btn-sm btn-outline" onClick={acao}>
-              {textoBotao}
-            </button>
-          )}
-        </div>
-      )}
-    </article>
-  );
-}
+ export const cartao = StyleSheet.create({
+    cardPrincipal:{
+     display:'flex',
+     flex:1,
+     flexDirection:'column',
+     marginTop:15,
+     marginHorizontal:5,
+     paddingHorizontal:0,
+     paddingVertical:0,
+     borderRadius:10,
+     
+    },
+    titulo:{
+        display:'flex',
+        justifyContent:'center',
+        paddingLeft:15,
+        alignItems:'baseline',
+        borderRadius:2,
+    },
+    conteudo:{
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'baseline',
+        padding:15,
+    },
+    gasto:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        gap:20,
+        padding:10,
+    },
+    bot:{
+        flex:1,
+        borderRadius:5,
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        padding:5,
+        backgroundColor:'#d8e7e4',
+        boxShadow:'10 #0a0a0a'
+    },
+    textoGeral:{
+      fontWeight:'bold',
+      color:'#ffffff'
+    },
+    tituloCartao:{
+      fontSize:25,
+    },
+    conteudoCartao:{
+      fontSize:20,
+    },
+    gastoCartao:{
+      fontSize:21,
+    }
+    ,cor1:{
+      backgroundColor:'#0eabdbe1',
+    },
+    cor2:{
+      backgroundColor:'#18a5ddd7',
+    },
+    cor3:{
+      backgroundColor:'#188accd7'
+    }
+})

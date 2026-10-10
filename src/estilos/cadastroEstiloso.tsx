@@ -1,80 +1,84 @@
-import React, { FormEvent, useState } from "react";
+import { StyleSheet } from "react-native";
 
-interface CadastroProps {
-  onSubmit?: (dados: {
-    nome: string;
-    email: string;
-    senha: string;
-  }) => void;
-}
+export const cadastroStyles = StyleSheet.create({
+    planoDeFundo:{
+        height:'100%',
+        width:'100%',
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#e2e8eb',
+        padding:10,
+    },
+    areaForms:{
+        width:'80%',
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'flex-start',
+        padding:15,
+        paddingTop:20,
+        paddingBottom:30,
+        borderWidth:3,
+        gap:10,
+        borderColor:'#fff',
+        borderRadius:10,
+        backgroundColor:'#20cddacb'
+    },
+    titleForms:{
+      fontWeight:'bold',
+      textAlign:'center',
+      color:'#fff',
+    },
+    inputsCadastro:{
+        minWidth:'100%',
+        maxWidth:'100%',
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        alignItems:'center',
+        padding:5,
+        marginTop:5,
+        borderRadius:5,
+        backgroundColor:'#fff'
+    },
+    txtInput:{
+        width:'100%',
+        fontSize:20,
+        color:'#000',
+        wordWrap:'wrap',
+        textAlign:'justify',
+        fontWeight:'bold'
+    },
+    labelTxt:{
+        fontSize:20,
+        fontWeight:'bold',
+        wordWrap:'wrap',
+        textAlign:'center',
+        color:'#fff'
+    },
+    buttonStyle:{
+        minWidth:'80%',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:5,
+        marginTop:5,
+        paddingHorizontal:10,
+        paddingVertical:2,
+        backgroundColor:'#e8eef0b7',
+        borderWidth:5,
+        borderColor:'#fff'
 
-export default function Cadastro({ onSubmit }: CadastroProps) {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+    },
+    buttonStyleTxt:{
+      fontSize:20,
+      fontWeight:'bold',
+      textAlign:'center',
+      color:'#000',
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    onSubmit?.({ nome, email, senha });
-  }
+    }
 
-  return (
-    <main className="main-content">
-      <div className="auth-container">
-        <section className="auth-box">
-          <div className="auth-logo">
-            <i className="fa-solid fa-droplet" aria-hidden="true" />
-            <h2>Criar conta</h2>
-          </div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="cadastro-nome">Nome</label>
-              <input
-                id="cadastro-nome"
-                className="form-control"
-                type="text"
-                value={nome}
-                onChange={(event) => setNome(event.target.value)}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="cadastro-email">E-mail</label>
-              <input
-                id="cadastro-email"
-                className="form-control"
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="cadastro-senha">Senha</label>
-              <input
-                id="cadastro-senha"
-                className="form-control"
-                type="password"
-                value={senha}
-                onChange={(event) => setSenha(event.target.value)}
-                required
-              />
-            </div>
-
-            <button className="btn btn-primary btn-block" type="submit">
-              <i className="fa-solid fa-user-plus" aria-hidden="true" />
-              Criar conta
-            </button>
-          </form>
-
-          <div className="auth-footer">
-            Já possui uma conta? <a href="/login">Entrar</a>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
-}
+})

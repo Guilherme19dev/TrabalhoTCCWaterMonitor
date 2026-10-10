@@ -1,38 +1,50 @@
-import React, { ReactNode } from "react";
+import { StyleSheet } from "react-native"
 
-interface GraficosProps {
-  titulo?: string;
-  informacao?: string;
-  children?: ReactNode;
-}
 
-export default function Graficos({
-  titulo = "Análise de consumo",
-  informacao = "Acompanhe seu consumo de água e observe alterações ao longo do tempo.",
-  children,
-}: GraficosProps) {
-  return (
-    <main className="main-content">
-      <div className="page-container">
-        <div className="page-header">
-          <h1 className="page-title">{titulo}</h1>
-        </div>
 
-        <section className="card">
-          <div className="product-image-box">
-            {children ?? (
-              <div className="resource-icon" aria-label="Gráfico">
-                <i className="fa-solid fa-chart-line" aria-hidden="true" />
-              </div>
-            )}
-          </div>
-        </section>
 
-        <section className="hero">
-          <h1>Seu consumo de água</h1>
-          <p>{informacao}</p>
-        </section>
-      </div>
-    </main>
-  );
-}
+export const grafEstilo = StyleSheet.create({
+    geralView:{
+        height:'100%',
+        width:'100%',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'flex-start',
+        backgroundColor:'#e2e8eb',
+        gap:20,
+        paddingTop:40,
+        paddingHorizontal:10
+        
+    },
+    viewGraphic:{
+        height:'40%',
+        width:'100%',
+        borderWidth:2,
+        borderColor:'#16c2cedc',
+        borderRadius:10,
+        backgroundColor:'#fff'
+    },
+    informaGraf:{
+        width:'100%',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        padding:10,
+        paddingBottom:20,
+        paddingTop:5,
+        backgroundColor:'#20cddacb',
+        borderRadius:10,
+        borderWidth:3,
+        borderColor:'#fff'
+    },
+    txtInfoGraf:{
+      width:'100%',
+      justifyContent:'center',
+      alignItems:'center',
+      textAlign:'justify',
+      fontSize:25,
+      fontWeight:'bold',
+      color:'#fff',
+      wordWrap:'wrap'
+    }
+})

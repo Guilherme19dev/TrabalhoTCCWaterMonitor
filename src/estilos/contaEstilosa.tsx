@@ -1,97 +1,113 @@
-import React from "react";
+import { StyleSheet } from "react-native";
 
-interface ContaProps {
-  nome: string;
-  email: string;
-  telefone?: string;
-  foto?: string;
-  onEditar?: () => void;
-  onSair?: () => void;
-}
+ export const contaEstilo = StyleSheet.create({
+    geralVConta:{
+        width:'100%',
+        height:'100%',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'flex-start',
+        padding:5,
+        paddingTop:25,
+        gap:30,
+        backgroundColor:'#e2e8eb'
+    },
+    infoPrinc:{
+        width:'100%',
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        paddingHorizontal:7,
+        paddingVertical:10,
+        gap:10,       
+        marginTop:10,
+        borderTopWidth:2,
+        borderTopColor:'#fff',
+        borderBottomWidth:2,
+        borderBottomColor:'#fff',
+        borderRadius:10,
+        backgroundColor:'#20cddacb'
+    },VTexto:{
+        width:'65%',
+        display:'flex',
+        alignItems:'flex-start',
+        justifyContent:'center',
+        backgroundColor:'#ffffff9a',
+        borderRadius:10,
+        wordWrap:'wrap',
+        padding:3,
+        paddingTop:10,
+        paddingLeft:10
+    },imagemP:{
+       width:'30%',
+        display:'flex',
+        height:150,
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#ffffff9a',
+        borderRadius:10,
+        padding:5
+    },
+    VtextTxt:{
+        fontSize:16,
+        width:"90%",
+        fontWeight:'bold',
+        textAlign:'justify',
+        color:"#080808",
+        wordWrap:'wrap'
+    },
+    titulos:{
+       fontSize:25,
+       marginBottom:20
+    },
+    infoAdc:{
+        width:'100%',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        padding:10,
+        borderRadius:10,
+        marginTop:10,
+        backgroundColor:'#20cddacb'
+    },
+    cardDasInfoAdc:{
+        width:'100%',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:10,
+        padding:5,
+        backgroundColor:'#ffffff9a'
+    },
+    viewButton:{
+        width:'100%',
+        display:'flex',
+        flexDirection:'column',
+        backgroundColor:'#fff',
+        borderRadius:'10',
+        justifyContent:'center',
+        alignItems:'center',
+        padding:5,
+        paddingBottom:10,
+        margin:10,
+        marginTop:30,
+        gap:5
+    },buttonButton:{
+        width:'100%',
+        marginTop:2,
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#1ba3e2',
+        borderRadius:5,  
+        padding:7, 
+    },buttonTxt:{
+       color:"#fff",
+       fontSize:20,
+       fontWeight:'bold',
+       textAlign:'center',
+    }
 
-export default function Conta({
-  nome,
-  email,
-  telefone,
-  foto,
-  onEditar,
-  onSair,
-}: ContaProps) {
-  return (
-    <main className="main-content">
-      <div className="page-container">
-        <div className="page-header">
-          <h1 className="page-title">Minha conta</h1>
-        </div>
-
-        <section className="account-welcome">
-          <div className="account-photo">
-            {foto ? (
-              <img src={foto} alt={`Foto de ${nome}`} />
-            ) : (
-              <i className="fa-solid fa-user" aria-hidden="true" />
-            )}
-          </div>
-
-          <div className="account-welcome-text">
-            <span className="welcome-label">Bem-vindo(a)</span>
-            <div className="user-name">{nome}</div>
-          </div>
-
-          <div className="account-logo-mini">
-            <i className="fa-solid fa-droplet" aria-hidden="true" />
-          </div>
-        </section>
-
-        <section className="account-grid">
-          <article className="account-card">
-            <h3>
-              <i className="fa-solid fa-user" aria-hidden="true" />
-              Dados pessoais
-            </h3>
-
-            <div className="info-row">
-              <span className="label">Nome</span>
-              <span className="value">{nome}</span>
-            </div>
-
-            <div className="info-row">
-              <span className="label">E-mail</span>
-              <span className="value">{email}</span>
-            </div>
-
-            {telefone && (
-              <div className="info-row">
-                <span className="label">Telefone</span>
-                <span className="value">{telefone}</span>
-              </div>
-            )}
-          </article>
-
-          <article className="account-card">
-            <h3>
-              <i className="fa-solid fa-gear" aria-hidden="true" />
-              Configurações
-            </h3>
-
-            <div className="settings-actions">
-              {onEditar && (
-                <button className="btn btn-primary" onClick={onEditar}>
-                  <i className="fa-solid fa-pen" aria-hidden="true" />
-                  Editar dados
-                </button>
-              )}
-
-              {onSair && (
-                <button className="btn btn-danger" onClick={onSair}>
-                  <i className="fa-solid fa-right-from-bracket" aria-hidden="true" />
-                  Sair
-                </button>
-              )}
-            </div>
-          </article>
-        </section>
-      </div>
-    </main>
-  );
-}
+})

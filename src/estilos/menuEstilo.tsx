@@ -1,77 +1,43 @@
-import React from "react";
+import { StyleSheet} from "react-native";
 
-interface MenuItem {
-  label: string;
-  href: string;
-  icon?: string;
-  active?: boolean;
-}
-
-interface MenuProps {
-  aberto?: boolean;
-  onFechar?: () => void;
-  itens?: MenuItem[];
-}
-
-const itensPadrao: MenuItem[] = [
-  { label: "Início", href: "/", icon: "fa-house" },
-  { label: "Minha conta", href: "/conta", icon: "fa-user" },
-  { label: "Gráficos", href: "/graficos", icon: "fa-chart-line" },
-  { label: "Saiba mais", href: "/saiba-mais", icon: "fa-circle-info" },
-];
-
-export default function Menu({
-  aberto = false,
-  onFechar,
-  itens = itensPadrao,
-}: MenuProps) {
-  return (
-    <>
-      <aside className={`sidebar ${aberto ? "open" : ""}`}>
-        <div className="sidebar-header">
-          <div className="sidebar-logo">
-            <i className="fa-solid fa-droplet" aria-hidden="true" />
-            Água em Dia
-          </div>
-
-          <button
-            className="sidebar-close"
-            type="button"
-            onClick={onFechar}
-            aria-label="Fechar menu"
-          >
-            <i className="fa-solid fa-xmark" aria-hidden="true" />
-          </button>
-        </div>
-
-        <nav className="sidebar-nav">
-          {itens.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`sidebar-link ${item.active ? "active" : ""}`}
-            >
-              {item.icon && (
-                <i className={`fa-solid ${item.icon}`} aria-hidden="true" />
-              )}
-              <span>{item.label}</span>
-            </a>
-          ))}
-        </nav>
-
-        <div className="sidebar-footer">
-          <a href="/login" className="sidebar-link">
-            <i className="fa-solid fa-right-from-bracket" aria-hidden="true" />
-            <span>Sair</span>
-          </a>
-        </div>
-      </aside>
-
-      <div
-        className={`sidebar-overlay ${aberto ? "active" : ""}`}
-        onClick={onFechar}
-        aria-hidden="true"
-      />
-    </>
-  );
-}
+export const styles = StyleSheet.create({
+    menu:{
+     display:'flex',
+     flexDirection:'row',
+     alignItems:'center',
+     justifyContent:'center',
+     height:60,
+     width:'100%',
+     backgroundColor:'#15b1eedc',
+     paddingHorizontal:1,
+     paddingTop:0,
+     borderBottomWidth:10,
+     borderTopWidth:5,
+     borderTopColor:'transparent',
+     gap:2,
+     borderBottomColor:'#15b1eedc'
+    },
+    item:{
+        display:'flex',
+        height:'100%',
+        borderRadius:10,
+        backgroundColor:'#15b1eedc',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRightWidth:5,
+        borderRightColor:'#15b1eedc',
+        borderLeftWidth:3,
+        borderLeftColor:'#121438b4',
+        borderBottomWidth:2,
+        borderBottomColor:'#12143849'
+        
+    },
+    textMenu:{
+      color:'#fff',
+      display:'flex',
+      textAlign:'center',
+      textAlignVertical:'center',
+      height:'100%',
+      width:'100%'
+    }
+});

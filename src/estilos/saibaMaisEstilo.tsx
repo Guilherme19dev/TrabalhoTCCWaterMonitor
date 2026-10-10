@@ -1,74 +1,61 @@
-import React from "react";
+import { StyleSheet } from "react-native";
 
-interface Secao {
-  titulo: string;
-  texto: string;
-  imagem?: string;
-}
+ export const Saiba = StyleSheet.create({
+   viewGeral:{
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'flex-start',
+    width:'100%',
+    height:'100%',
+    paddingHorizontal:10,
+    paddingTop:35,
+    backgroundColor:'#e2e8eb'
+   } , 
+   viewSec:{
+   display:'flex',
+   flexDirection:'row',
+   },
+   textosPagina:{
+      display:'flex',
+      alignItems:'center',
+      boxSizing:'border-box',
+      justifyContent:'center',
+      marginBottom:10,
+      padding:5,
+      paddingBottom:10,
+      gap:5,      
+      borderRadius:5,
+      borderWidth:2,
+      borderColor:'#14acda',
+      backgroundColor:'#ffffff9d'
+   },
+   textoPrinc:{
+      width:'95%',
+   },
+   textoSec:{
+      width:'100%'
+   },
+   textoTexto:{
+      fontWeight:'bold',
+      fontFamily:'Arial',
+      flexWrap:'wrap',
+      color:'#000000d8'
 
-interface SaibaMaisProps {
-  secoes?: Secao[];
-}
-
-const secoesPadrao: Secao[] = [
-  {
-    titulo: "Sobre o projeto",
-    texto:
-      "Este sistema foi desenvolvido para auxiliar no acompanhamento do consumo de água, permitindo visualizar informações e analisar alterações ao longo do tempo.",
-  },
-  {
-    titulo: "Por que acompanhar o consumo?",
-    texto:
-      "O acompanhamento periódico pode ajudar o usuário a conhecer melhor seus hábitos de consumo e identificar mudanças que mereçam atenção.",
-  },
-  {
-    titulo: "Análise por gráficos",
-    texto:
-      "Os gráficos apresentam os dados de consumo de forma visual, facilitando a comparação entre diferentes períodos.",
-  },
-];
-
-export default function SaibaMais({
-  secoes = secoesPadrao,
-}: SaibaMaisProps) {
-  return (
-    <main className="main-content">
-      <div className="page-container">
-        <div className="plans-page-header">
-          <h1>Saiba mais</h1>
-          <p>Informações sobre o sistema e o acompanhamento do consumo.</p>
-        </div>
-
-        {secoes.map((secao, index) => (
-          <section className="resource-card" key={`${secao.titulo}-${index}`}>
-            {secao.imagem ? (
-              <img
-                className="resource-icon"
-                src={secao.imagem}
-                alt=""
-              />
-            ) : (
-              <div className="resource-icon">
-                <i
-                  className={`fa-solid ${
-                    index === 0
-                      ? "fa-circle-info"
-                      : index === 1
-                      ? "fa-droplet"
-                      : "fa-chart-line"
-                  }`}
-                  aria-hidden="true"
-                />
-              </div>
-            )}
-
-            <div className="resource-info">
-              <h3>{secao.titulo}</h3>
-              <p>{secao.texto}</p>
-            </div>
-          </section>
-        ))}
-      </div>
-    </main>
-  );
-}
+   },
+   txtTextoP:{
+      fontSize:20,
+      width:'65%',
+      textAlign:'center',
+      
+   },txtTextoS:{
+       fontSize:19,
+       width:'90%',
+       textAlign:'justify',
+   },
+   imagem:{
+      height:'95%',
+      width:'30%',
+      borderRadius:5
+   }
+})
