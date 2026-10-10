@@ -21,7 +21,7 @@ export default function Home() {
             }
 
             const resposta = await fetch(
-                "http://10.145.159.54:3000/verificar-sessao",
+                "http://192.168.0.18:3000/verificar-sessao",
                 {
                     method: "GET",
                     headers: {
