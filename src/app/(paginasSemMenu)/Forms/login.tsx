@@ -20,7 +20,7 @@ export default function login(){
         }
 
 
-    const resposta = await fetch("http://192.168.0.18:3000", {
+    const resposta = await fetch("http://10.145.159.54:3000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
