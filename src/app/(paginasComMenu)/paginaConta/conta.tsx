@@ -1,6 +1,6 @@
 import {View,Text,Image,Pressable} from 'react-native'
-import Info from './infoTexto'
-import Button from './botaoConta'
+import Info from '../../../components/infoTexto'
+import Button from '../../../components/botaoConta'
 import { contaEstilo } from '../../../estilos/contaEstilosa'
 
 export default function conta(){

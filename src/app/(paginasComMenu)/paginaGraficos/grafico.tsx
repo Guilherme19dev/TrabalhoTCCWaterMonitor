@@ -4,7 +4,7 @@ import { useLocalSearchParams,Link } from 'expo-router';
 import { useFont } from "@shopify/react-native-skia";
 import {Water} from '../../../listaDeAgua'
 import {grafEstilo} from '../../../estilos/graficosEstilosos'
-import InfoDosGraficos from './mostradorDeInfo'
+import InfoDosGraficos from '../../../components/mostradorDeInfo'
 
 export default function Graphics(){
   const {objeto} = useLocalSearchParams()

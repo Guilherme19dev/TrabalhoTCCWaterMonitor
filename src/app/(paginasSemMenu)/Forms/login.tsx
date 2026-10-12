@@ -1,8 +1,8 @@
 import{Alert, Text,View} from "react-native"
 import{useState} from 'react'
-import ButtonGo from "./ButtonGo"
+import ButtonGo from "../../../components/ButtonGo"
 import { cadastroStyles } from "@/estilos/cadastroEstiloso"
-import ItemF from './itemFormulario'
+import ItemF from '../../../components/itemFormulario'
 import {router}from "expo-router"
 import * as SecureStore from "expo-secure-store"
 

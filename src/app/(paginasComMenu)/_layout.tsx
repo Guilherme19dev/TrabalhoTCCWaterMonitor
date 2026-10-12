@@ -1,41 +1,49 @@
-import {Stack} from 'expo-router'
+import {Tabs} from 'expo-router'
 import {View} from 'react-native'
-import MenuItem from './paginaInicio/menuItem'
+import MenuItem from '../../components/menuItem'
 import{styles} from '../../estilos/menuEstilo'
+import { FontAwesome5 } from '@expo/vector-icons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';;
+
 
 export default function Layout(){
     return(
         <View style={{flex:1}}>
            
-        <Stack
+        <Tabs
         screenOptions={{
-            headerStyle:{
-                backgroundColor:'#3201e4',
-            },
-            headerTintColor:'#fff',
+            headerShown:false
         }}
         >
-            <Stack.Screen name="paginaInicio/paginaInicio" options={{title:"Home"}}/>
-            <Stack.Screen name="paginaConta/conta" options={{title:"Conta"}}/>
-            <Stack.Screen name="paginaSaibaM/saibaMais" options={{title:"Sobre Nós"}}/>
-            <Stack.Screen name="paginaGraficos/grafico" options={{title:"Graficos De Consumo"}}/>
-        </Stack>
-          <View style={[styles.menu,{position:'absolute',marginTop:'25%'}]}>
-                 <MenuItem 
-                 pagina="Saiba Mais" 
-                 linkPagina ="/paginaSaibaM/saibaMais"
-                 />
-                 <MenuItem 
-                 pagina="Saldo de Consumo" 
-                 linkPagina="/paginaGraficos/grafico"
-                 objetoWater={0}
-                 palavraInd={"diário"}
-                 separadorDeConsumo={"as horas"}
-                 />
-                 <MenuItem 
-                 pagina="Sua Conta" 
-                 linkPagina="/paginaConta/conta"/>
-                </View>
+            <Tabs.Screen name="paginaInicio/paginaInicio" options={{title:"Home",
+                 tabBarIcon: ({ color, size }) => (
+            <FontAwesome5
+              name="home"
+              color={color}
+              size={size}
+            />
+          ),
+            }}/>
+            <Tabs.Screen name="paginaConta/conta" options={{title:"Conta",
+                 tabBarIcon: ({ color, size }) => (
+            <FontAwesome5
+              name="user"
+              color={color}
+              size={size}
+            />
+          ),
+            }}/>
+            <Tabs.Screen name="paginaSaibaM/saibaMais" options={{title:"Sobre Nós",
+                 tabBarIcon: ({ color, size }) => (
+            <FontAwesome5
+              name="bookmark"
+              color={color}
+              size={size}
+            />
+          ),
+            }}/>
+            <Tabs.Screen name="paginaGraficos/grafico" options={{href:null}}/>
+        </Tabs>
         </View>
     )
 }
