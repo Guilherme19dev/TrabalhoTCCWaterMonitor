@@ -1,6 +1,6 @@
 import {View,Text,Pressable,StyleSheet} from 'react-native'
 import{Link,router}from "expo-router"
-import {contaEstilo} from '../../../estilos/contaEstilosa'
+import {contaEstilo} from '../estilos/contaEstilosa'
 import * as SecureStore from "expo-secure-store"
 
 type buttonProps = {

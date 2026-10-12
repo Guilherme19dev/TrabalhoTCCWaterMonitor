@@ -1,5 +1,5 @@
 import{View,Text,StyleSheet} from 'react-native'
-import {styles} from '../../../estilos/menuEstilo'
+import {styles} from '../estilos/menuEstilo'
 import {Link,Href} from 'expo-router'
 type itensMenu={
 pagina:string

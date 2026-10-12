@@ -1,29 +1,77 @@
 import {StyleSheet} from 'react-native'
 
+
  export const cartao = StyleSheet.create({
-    cardPrincipal:{
+  menuBar:{
+   height:100,
+   width:'100%',
+   padding:30,
+   display:'flex',
+   flexDirection:'row',
+   alignItems:'center',
+   gap:10,
+   borderBottomWidth:1,
+   borderBottomColor:'#0d223665',
+   justifyContent:'flex-start'
+    },
+    imagem:{
+      height:'55%',
+      width:'15%',
+      display:'flex',
+      alignItems:'baseline',
+      padding:30,
+      borderRadius:50
+    },
+    TextMenu:{
+      fontSize:20,
+      color:'#061136c0',
+      fontWeight:'bold',
+      textAlign:'center'
+    },
+  cardGeralDeConsumo:{
+      width:'100%',
+      padding:10,
+      marginTop:40,
+      borderRadius:20,
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center',
+    },
+  cardPrincipal:{
      display:'flex',
      flex:1,
      flexDirection:'column',
      marginTop:15,
      marginHorizontal:5,
-     paddingHorizontal:0,
-     paddingVertical:0,
-     borderRadius:10,
+     paddingHorizontal:5,
+     paddingVertical:5,
+     borderRadius:20,
      
+    },
+    icone:{
+      height:40,
+      width:40,
+      alignItems:'center',
+      justifyContent:'center',
+      textAlign:'center',
+      borderRadius:50,
+      backgroundColor:'#2f82ee54'
     },
     titulo:{
         display:'flex',
-        justifyContent:'center',
+        flexDirection:'row',
+        gap:10,
+        justifyContent:'flex-start',
         paddingLeft:15,
         alignItems:'baseline',
         borderRadius:2,
     },
     conteudo:{
         display:'flex',
-        justifyContent:'center',
+        gap:5,
+        justifyContent:'flex-start',
         alignItems:'baseline',
-        padding:15,
+        padding:10,
     },
     gasto:{
         display:'flex',
@@ -35,7 +83,7 @@ import {StyleSheet} from 'react-native'
     },
     bot:{
         flex:1,
-        borderRadius:5,
+        borderRadius:25,
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
@@ -45,18 +93,26 @@ import {StyleSheet} from 'react-native'
     },
     textoGeral:{
       fontWeight:'bold',
-      color:'#ffffff'
     },
     tituloCartao:{
-      fontSize:25,
+      fontSize:17,
     },
     conteudoCartao:{
       fontSize:20,
     },
     gastoCartao:{
-      fontSize:21,
+      fontSize:28,
     }
-    ,cor1:{
+    ,
+    unidadeMed:{
+      fontSize:17,
+    },
+    textoUni:{
+      fontWeight:'bold',
+      color:'#29262679'
+    },
+    
+    cor1:{
       backgroundColor:'#0eabdbe1',
     },
     cor2:{

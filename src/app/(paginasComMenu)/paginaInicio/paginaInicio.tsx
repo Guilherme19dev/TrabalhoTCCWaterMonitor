@@ -1,41 +1,50 @@
-import { StyleSheet, TextInput,Alert, Pressable, Text, View, ScrollView } from 'react-native';
-import Card from './card'
+import { StyleSheet,Image,TextInput,Alert, Pressable, Text, View, ScrollView } from 'react-native';
+import Card from '../../../components/card'
+import MinhaTela from '../../../components/displayConsumo'
+import card from '../../../components/card';
+import {cartao} from '../../../estilos/cardEstilo'
+import MenuEmBarra from '@/components/menuBarra';
 
 
 export default function PaginaInicio() {
      console.log(">>> PAGINA INICIO FOI ABERTA <<<");
   return(
   <View style={{paddingTop:0}}>
-    <View style={{width:'100%', height:'2%', backgroundColor:'#3201e4',position:'fixed'}}>
-            </View>
             <View style={{height:'100%'}}>
+<MenuEmBarra/>
      <ScrollView>
-          <View style={{paddingTop:90}}>
+        <View style={cartao.cardGeralDeConsumo}>
+         <MinhaTela/>
+         </View>
+          <View style={{paddingTop:10}}>
            <Card 
-            cor="#230edb"
+            cor="#fff"
             titulo="Consumo por Hora"
             conteudo="Informações básicas1"
-            consumo="Consumo de 35 litros"
+            consumo={35}
+            tipoDeConsumo="l/h"
             linkRel="../paginaGraficos/grafico"
             objetoWater={0}
             palavraInd={"ao longo das horas"}
             separadorDeConsumo={ "as horas"}
             />
            <Card 
-            cor="#18a5dd"
+            cor="#fff"
             titulo="Consumo Diário"
             conteudo="Informações básicas2"
-            consumo="Consumo de 350 litros"
+            consumo={350}
+            tipoDeConsumo="l/dia"
             linkRel="../paginaGraficos/grafico"
             objetoWater={1}
             palavraInd={"diário"}
             separadorDeConsumo={"os dias"}
            />
            <Card 
-            cor="#9318cc"
+            cor="#fff"
             titulo="Consumo Mensal"
             conteudo="Informações básicas3"
-            consumo="Consumo de 3500 litros"
+            consumo={3500}
+            tipoDeConsumo="m³/mês"
             linkRel="../paginaGraficos/grafico"
             objetoWater={2}
             palavraInd={"mensal"}

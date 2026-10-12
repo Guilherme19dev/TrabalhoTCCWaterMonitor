@@ -1,8 +1,8 @@
 import{Text,View,Alert} from "react-native"
 import{useState} from 'react'
-import ButtonGo from "./ButtonGo"
+import ButtonGo from "../../../components/ButtonGo"
 import { cadastroStyles } from "@/estilos/cadastroEstiloso"
-import ItemF from './itemFormulario'
+import ItemF from '../../../components/itemFormulario'
 import * as SecureStore from "expo-secure-store";
 import {router} from "expo-router"
 import { useValidation } from 'react-simple-form-validator';
