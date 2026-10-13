@@ -3,59 +3,141 @@ import { StyleSheet } from "react-native";
  export const Saiba = StyleSheet.create({
    viewGeral:{
     display:'flex',
-    flexDirection:'column',
-    alignItems:'center',
-    justifyContent:'flex-start',
     width:'100%',
-    height:'100%',
-    paddingHorizontal:10,
-    paddingTop:35,
-    backgroundColor:'#e2e8eb'
+    paddingHorizontal:20,
+    paddingTop:45,
+    backgroundColor:'#e2e8eb',
    } , 
+   conteudo:{
+    padding:16,
+    paddingTop:40,
+    paddingBottom: 250,
+    gap: 12,
+
+   },
    viewSec:{
    display:'flex',
-   flexDirection:'row',
+   flexDirection:'column',
+   padding:5,
    },
    textosPagina:{
       display:'flex',
+      maxWidth:"100%",
       alignItems:'center',
       boxSizing:'border-box',
       justifyContent:'center',
       marginBottom:10,
-      padding:5,
-      paddingBottom:10,
+      padding:15,
+      paddingTop:30,
+      paddingBottom:30,
       gap:5,      
-      borderRadius:5,
-      borderWidth:2,
-      borderColor:'#14acda',
-      backgroundColor:'#ffffff9d'
+      borderRadius:30,
    },
    textoPrinc:{
       width:'95%',
+      paddingHorizontal:10,
+      paddingBottom:10,
+      paddingTop:0
    },
    textoSec:{
+    maxWidth:'100%',
       width:'100%'
    },
    textoTexto:{
-      fontWeight:'bold',
       fontFamily:'Arial',
       flexWrap:'wrap',
-      color:'#000000d8'
-
    },
    txtTextoP:{
-      fontSize:20,
+      fontSize:30,
+      fontWeight:'bold',
       width:'65%',
-      textAlign:'center',
+      color:'#fff',
+      textAlign:'left',
       
    },txtTextoS:{
-       fontSize:19,
+       fontSize:18,
        width:'90%',
+       color:'#f8f4f4b4',
        textAlign:'justify',
    },
    imagem:{
       height:'95%',
       width:'30%',
       borderRadius:5
+   },
+   cardDesign:{
+    display:'flex',
+    justifyContent:'flex-start',
+    alignItems:'center',
+    padding:20,
+    borderWidth:1,
+    borderColor:'#5d5f614b',
+    backgroundColor:'#fff',
+    borderRadius:30
+   },
+   cardTextArea:{
+    gap:7
+   },
+   cardIMG:{
+     width:'100%',
+     display:'flex',
+     justifyContent:'flex-start',
+     alignItems:'flex-start'
+   },
+   cardTxt:{
+    fontSize:20,
+    fontWeight:'bold',
+    color:'#000',
+   },
+   cardTxtSec:{
+    fontSize:15,
+    fontWeight:'bold',
+    color:'#0000007a',
+   },
+tituloRedes:{
+fontSize:30,
+fontWeight:'bold',
+textAlign:'justify',
+color:'#0e0546e7',
+marginBottom:10
+},
+   cardSocial:{
+    width:'100%',
+    padding:20,
+    display:'flex',
+    flexDirection:'row',
+    gap:10,
+    borderRadius:30,
+    borderWidth:1,
+    borderColor:'#5d5f614b',
+    justifyContent:'flex-start',
+    alignItems:'center',
+    backgroundColor:'#fff'
+   },
+
+   iconeSocial:{
+    padding:15,
+    backgroundColor:'#1f9ce43d',
+    borderRadius:25,
+    alignItems:'center',
+    justifyContent:'center'
+   },
+   areatxtSocial:{
+     height:'100%',
+     display:'flex',
+     flexDirection:'column',
+     alignItems:'flex-start',
+     gap:2,
+   },
+   txtTitle:{
+     fontSize:18,
+     fontWeight:'bold',
+     textAlign:"justify",
+     color:'#000000f6'
+   },
+   txtInfo:{
+     fontSize:17,
+     textAlign:"justify",
+     color:'#00000069'
    }
 })
