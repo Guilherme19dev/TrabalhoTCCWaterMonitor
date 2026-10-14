@@ -25,7 +25,7 @@ async function conexão(){
       );
       return;
     }
-  const info = await fetch("http://192.168.0.18:3000/Pegar-info",
+  const info = await fetch("http://10.145.159.54:3000/Pegar-info",
     {
                     method: "GET",
                     headers: {
