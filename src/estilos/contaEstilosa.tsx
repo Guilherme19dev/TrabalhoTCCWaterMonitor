@@ -3,74 +3,75 @@ import { StyleSheet } from "react-native";
  export const contaEstilo = StyleSheet.create({
     geralVConta:{
         width:'100%',
-        height:'100%',
         display:'flex',
         alignItems:'center',
         justifyContent:'flex-start',
-        padding:5,
-        paddingTop:25,
-        gap:30,
+        padding:20,
+        paddingTop:0,
         backgroundColor:'#e2e8eb'
     },
     infoPrinc:{
         width:'100%',
         display:'flex',
-        flexDirection:'row',
+        flexDirection:'column',
         alignItems:'center',
         justifyContent:'center',
         paddingHorizontal:7,
         paddingVertical:10,
+        marginBottom:150,
         gap:10,       
-        marginTop:10,
-        borderTopWidth:2,
-        borderTopColor:'#fff',
-        borderBottomWidth:2,
-        borderBottomColor:'#fff',
-        borderRadius:10,
-        backgroundColor:'#20cddacb'
-    },VTexto:{
-        width:'65%',
+        marginTop:20,
+        borderWidth:1,
+        borderColor:'#5d5f614b',
+        borderRadius:30,
+        backgroundColor:'#fff'
+    },
+    viewHead:{
+      width:'100%',
+      display:'flex',
+      flexDirection:'column',
+      padding:10,
+      justifyContent:'center',
+      alignItems:'flex-start',
+    },
+    VTexto:{
+        width:'100%',
         display:'flex',
         alignItems:'flex-start',
         justifyContent:'center',
-        backgroundColor:'#ffffff9a',
         borderRadius:10,
         wordWrap:'wrap',
-        padding:3,
-        paddingTop:10,
-        paddingLeft:10
+        padding:'10%',
+        gap:5
+        
     },imagemP:{
        width:'30%',
         display:'flex',
-        height:150,
-        flex:1,
+        height:100,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:'#ffffff9a',
-        borderRadius:10,
+        borderRadius:50,
         padding:5
     },
     VtextTxt:{
-        fontSize:16,
-        width:"90%",
-        fontWeight:'bold',
+        fontSize:14,
+        width:"100%",
         textAlign:'justify',
-        color:"#080808",
+        color:"#413f3f",
         wordWrap:'wrap'
     },
     titulos:{
-       fontSize:25,
-       marginBottom:20
+       fontSize:45,
     },
-    infoAdc:{
-        width:'100%',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        padding:10,
-        borderRadius:10,
-        marginTop:10,
-        backgroundColor:'#20cddacb'
+    inputEstilo:{
+      display:'flex',
+      width:'100%',
+      justifyContent:'flex-start',
+      alignItems:'center',
+      padding:10,
+      borderWidth:1,
+      borderColor:"#5d5f614b",
+      borderRadius:15
     },
     cardDasInfoAdc:{
         width:'100%',
@@ -87,11 +88,11 @@ import { StyleSheet } from "react-native";
         flexDirection:'column',
         backgroundColor:'#fff',
         borderRadius:'10',
-        justifyContent:'center',
-        alignItems:'center',
+        justifyContent:'flex-start',
+        alignItems:'flex-start',
         padding:5,
         paddingBottom:10,
-        margin:10,
+        margin:0,
         marginTop:30,
         gap:5
     },buttonButton:{

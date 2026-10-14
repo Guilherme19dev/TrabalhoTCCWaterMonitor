@@ -2,16 +2,15 @@ const express = require("express");
 const bcrypt = require("bcrypt")
 const banco = require("./tbanco")
 const jwt = require("jsonwebtoken")
-const app = express();
+const router = express.Router();
 
-app.use(express.json());
+router.use(express.json());
 
-app.post("/", async(req, res) => {
+router.post("/", async(req, res) => {
 
     try{
         
         const{email,senha,nome,numeroAp,criarConta} = req.body
-       
         if(criarConta != ""){
 
         if(!email || !senha || !nome || !numeroAp){
@@ -130,7 +129,7 @@ if(senhaCorreta){
     }
 
 });
-app.get("/verificar-sessao", (req, res) => {
+router.get("/verificar-sessao", (req, res) => {
 
     const auth = req.headers.authorization;
 
@@ -163,9 +162,6 @@ app.get("/verificar-sessao", (req, res) => {
         });
     }
 });
-
-app.listen(3000,"0.0.0.0", () => {
-    console.log("Servidor rodando na porta 3000");
-});
+module.exports = router;
 
 
